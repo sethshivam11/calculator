@@ -59,7 +59,14 @@ const Calculator = () => {
             <FontAwesome5 name="percentage" size={30} />
           </CharButton>
           <CharButton
-            onPress={() => setValue((prev) => prev + "/")}
+            onPress={() =>
+              setValue((prev) => {
+                if (prev && !isNaN(Number(prev.slice(prev.length - 1)))) {
+                  return prev + "/";
+                }
+                return prev;
+              })
+            }
             color="#FFC857"
           >
             <FontAwesome5 name="divide" size={30} />
@@ -73,7 +80,7 @@ const Calculator = () => {
             7
           </CharButton>
           <CharButton
-            onPress={() => setValue((prev) => prev + "7")}
+            onPress={() => setValue((prev) => prev + "8")}
             color="#E9724C"
           >
             8
