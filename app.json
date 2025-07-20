@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Calculator",
-    "slug": "Calculator",
+    "slug": "calculator",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,7 +9,10 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "dark": "./assets/images/ios-dark.png",
+      "light": "./assets/images/ios-light.png",
+      "tinted": "./assets/images/ios-tinted.png"
     },
     "android": {
       "adaptiveIcon": {
@@ -17,39 +20,31 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.blaise287.Calculator"
+      "package": "com.blaise287.calculator"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/icon.png"
+      "favicon": "./assets/images/adaptive-icon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash.png",
-          "imageWidth": 50,
+          "image": "./assets/images/splash-icon-light.png",
+          "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "image": "./assets/images/splash-icon-dark.png",
+            "backgroundColor": "#000000"
+          }
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
-    },
-    "extra": {
-      "router": {},
-      "eas": {
-        "projectId": "5eaf0cad-73fc-4d69-8a32-816c11a013f7"
-      }
-    },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
-    "updates": {
-      "url": "https://u.expo.dev/5eaf0cad-73fc-4d69-8a32-816c11a013f7"
     }
   }
 }
